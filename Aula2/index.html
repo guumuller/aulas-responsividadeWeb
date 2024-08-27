@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seletores Complexos</title>
+    <style type="text/css">
+        .container{
+            width: 90%;
+            margin: 0 auto;
+            padding: 10px;
+            /* border: solid 3px red; */
+            overflow: hidden;
+        }
+        .container .bloco{
+            width: 33%;
+            text-align: center;
+            font-size: 82px;
+            font-weight: bold;
+            height: 180px;
+            background-color: #1578fa;
+            border: solid 1px #333;
+            border-radius: 8px;
+            float: left;
+            margin-bottom: 10px;    
+        }
+        /* Primeiro elemento filho */
+        .container .bloco:first-child{
+            color: #fff;
+            background-color: #000;
+        }
+        /* Último elemento filho */
+        .container .bloco:last-child{
+            background-color: red;
+        }
+        /* Seleciona elemento filho específico */
+        .container .bloco:nth-child(3){
+            background-color: green;
+        }
+        /* Seleciona os elemento filhos pares */
+        .container .bloco:nth-child(even){
+            background-color: gray;
+            color: #fff;
+        }
+        .container .bloco:nth-child(odd){
+            background-color: #000;
+            color: #fff;
+        }
+        .noticias{
+            width: 90%;
+            margin: 0 auto;
+            padding: 10px;
+            font-family: arial, sans-serif;
+        }
+        .noticias p{
+            background-color: #f7f7f7;
+            border: solid 1px #999;
+            padding: 20px 10px;
+        }
+        /* Selecionando os filhos DIRETOS */
+        .noticias > p{
+            background-color: #000;
+            color: #fff;
+        }
+        .noticias .destaque{
+            background-color: #333;
+            color: #f60;
+        }
+        /* Seleciona o irmão adjacente */
+        .destaque + p{
+            background-color: #333;
+            color: #f60;
+        }
+        /* Seleciona todos os elementos irmãos */
+        .destaque ~ p{
+            color: blue;
+        }
+        /*Pseudo-elementos */
+        .container > p{
+            font-family: verdana, sans-serif;
+            font-size: 16px;
+            text-align: justify;
+        }
+        .container > p::first-letter{
+            font-size: 72px;
+            font-weight: bold;
+            color: #333;
+            /* vertical-align: top; */
+        }
+        .container >p::first-line{
+            color: #444;
+            text-decoration: underline;
+        }
+        .container h1{
+            font-size: 32px;
+            text-transform: uppercase;
+            text-align: center;
+        }
+        /* Muda o estilo de algum texto selecionado */
+        .container h1::selection{
+            background-color: #f60;
+            color: pink;
+        }
+        /* Insere um ELEMENTO antes da tag selecionada */
+        .container h1::before{
+            content: "Antes ";
+            color: #f60;
+        }
+        /* Insere um ELEMENTO após da tag selecionada */
+        .container h1::after{
+            content: " Após";
+            color: #f60;
+        }
+        .container h2{
+            text-align: center;
+            font-size: 92px;
+            color: #999;
+        }
+        .container h2::before{
+            content: "";
+            width:200px;
+            height: 3px;
+            background-color: #f60;
+            display: block;
+            margin: 0 auto; 
+        }
+        .container h2::after{
+            content: "";
+            width:200px;
+            height: 3px;
+            background-color: #f60;
+            display: block;
+            margin: 0 auto; 
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>DESTAQUE</h2>
+        <h1>Seletores avançados de CSS</h1>
+        <p>Os seletores avançados de CSS proporcionam uma forma eficas de selecionar tags específicas sem ter que mudar a estrutura HTML.Dentre as formas avançadas de aplicar estilos, temos as pseudo-classes e os pseudo-elementos.</p>
+    </div>
+    <div class="container">
+        <div class="bloco"> 1 </div>
+        <div class="bloco"> 2</div>
+        <div class="bloco"> 3 </div>
+        <div class="bloco"> 4 </div>
+        <div class="bloco"> 5 </div>
+        <div class="bloco"> 6 </div>
+    </div>
+    <div class="noticias">
+        <p class="destaque">Notícia de Exemplo sobre as enchentes...</p>
+        <p>Notícia de Exemplo sobre a Expointer...</p>
+        <div>
+            <p>Notícia de Exemplo sobre Naruto</p>
+        </div>
+        <p>Notícia de exemplo sobre CDZ...</p>
+        <div>
+            <p>Notícia em Destaque...</p>
+        </div>
+    </div>
+</body>
+</html>
