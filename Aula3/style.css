@@ -1,0 +1,44 @@
+body{
+    margin: 0;
+    /* font-family: arial, verdana, helvetica, sans-serif; */
+    font-family: "Poppins", sans-serif;
+    
+}
+
+.container{
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 10px 20px;
+}
+
+.container:first-child{
+    max-width: 100%;
+    background: #333;
+}
+
+h1{
+    text-align: center;
+    color: #fff;
+    font-size: 48px;
+    text-shadow: 0px 0px 20px #c377d7
+}
+
+.logo{
+    text-align: center;
+}
+
+.efeito{
+    margin-top: -90px;
+    background: #c377d7;
+    height: 120px;
+    border-bottom: solid 10px #333;
+}
+
+.pontos{
+    width: 33.3%;
+    float: left;
+}
+
+.pontos img{
+    width: 100%;
+}
