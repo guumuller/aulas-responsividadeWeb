@@ -1,0 +1,100 @@
+body{
+    margin: 0;
+}
+
+header{
+    background: #f7f7f7;
+    border-bottom: solid 2px #ddd;
+    padding: 20px 40px;
+    margin-bottom: 40px;
+}
+
+.logo{
+    font-size: 48px;
+    font-family: arial, sans-serif;
+    font-style: italic;
+    font-weight: bold;
+    color: #333;
+    position: relative;
+    left: -300px;
+    animation-name: chegada;
+    animation-delay: 2s;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+}
+
+@keyframes chegada{
+    0%{left: -300px;}
+    80%{left: 80px;}
+    100%{left: 40px;}
+}
+
+.cores{
+    width: 150px;
+    height: 150px;
+    background: #ff95e4;
+    border-radius: 50%;
+    text-align: center;
+    border: solid 5px #33b4ff;
+    animation-name: movimento;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-fill-mode: both; /* forwards - backwards - both*/
+    animation-iteration-count: infinite; /* numero de repetições - infinite */
+    animation-direction: alternate; /* normal - reverse - alternate - alternate-reverse */
+    animation-delay: 2s; /* atraso */
+}
+
+.cores img{
+    height: 80px;
+    border-radius: 50%;
+    margin-top: 35px;
+}
+
+.anima{
+    margin-top: 30px;
+    width: 100px;
+    height: 100px;
+    border-radius: 20px;
+    background-color: #ffd900;
+    animation: animado 6s linear alternate infinite; 
+}
+
+.anima:hover{
+    animation-play-state: paused;
+}
+
+.anima img{
+    height: 80px;
+    border-radius: 50%;
+    margin-top: 13px;
+}
+
+.rodar{
+    width: 80px;
+    height: 80px;
+    background-color: #000000;
+    animation: rodar 0.3s linear infinite;
+    animation-play-state: paused; /* pausa a animação */
+}
+
+.rodar:hover{
+    animation-play-state: running; /* ativa a animação */
+}
+
+@keyframes movimento{
+    from{background: #ff95e4; margin-left: 0;}
+    to{background: #26085a; margin-left: 80%;}
+}
+
+@keyframes animado{
+    0%{background: #ffd900; margin-left: 0; transform: rotate(0);}
+    50%{background: #00a2ff; margin-left: 40%; transform: rotate(180deg);}
+    100%{background: #00ff37; margin-left: 80%; transform: rotate(360deg);}
+}
+
+@keyframes rodar{
+    from{transform: rotate(0);}
+    to{transform: rotate(360deg);}
+}
