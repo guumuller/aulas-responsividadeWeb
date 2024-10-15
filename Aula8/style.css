@@ -1,0 +1,42 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.background-image {
+    width: 100%;
+    height: 100%;
+    background-image: url('ferrari-icon.png');
+    height: 500px;
+    width: 500px;
+    background-size: cover;
+    background-position: center;
+}
+
+@media (max-width: 1020px) {
+    .background-image {
+        background-image: url('ferrari-icon.png');
+        height: 500px;
+    width: 500px;
+    }
+}
+
+@media (max-width: 780px) {
+    .background-image {
+        background-image: url('motorcycle-icon.png');
+        height: 500px;
+        width: 500px;
+    }
+}
+
+@media (max-width: 500px) {
+    .background-image {
+        background-image: url('bike-icon.png');
+        height: 500px;
+        width: 500px;
+    }
+}
