@@ -1,0 +1,15 @@
+.bloco{
+    background: #282828;
+    border: solid 2px #000;
+    color: #fff;
+    text-align: center;
+    padding: 40px 5px;
+    font-size: 48px;
+}
+
+.destaque{
+    background: #ddd;
+    border: solid 1PX #333;
+    padding: 10px;
+    min-height: 500px;
+}
